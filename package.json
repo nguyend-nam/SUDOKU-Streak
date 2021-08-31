@@ -1,0 +1,24 @@
+{
+  "name": "sudoku-streak",
+  "version": "1.0.0",
+  "description": "Solve sudoku problems consecutively to increase your Streak",
+  "main": "index.html",
+  "scripts": {
+    "start": "npm run lite",
+    "lite": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NguyenD-Nam/SUDOKU-Streak.git"
+  },
+  "author": "Dinh Nam Nguyen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NguyenD-Nam/SUDOKU-Streak/issues"
+  },
+  "homepage": "https://github.com/NguyenD-Nam/SUDOKU-Streak#readme",
+  "dependencies": {
+    "lite-server": "^2.6.1",
+    "save-dev": "0.0.1-security"
+  }
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SUDOKU Streak</title>
+	<meta charset="utf-8">
+	<meta property="og:image" content="img/logo.jpg"/>
+	<meta property="og:type" content="website"/>
+	<meta property="og:url" content="https://nguyend-nam.github.io/SUDOKU-Streak/">
+	<meta property="og:title" content="SUDOKU Streak">
+	<meta property="og:description" content="Welcome to SUDOKU Streak! Solve sudoku problems consecutively to increase your Streak.">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type = "image/x-icon" href="img/logo.jpg">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates" rel="stylesheet">
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+	<div class="message noti weight-600" id="message">CONGRATS! You solved it!</div>
+	<div class="welcome noti flex-col" id="welcome">
+		<span>Welcome to SUDOKU <span class="weight-600">Streak</span> and thank you for stopping by! Solve sudoku problems consecutively to increase your Streak.</span><button onclick="closeNoti()"><i class="far fa-times-circle"></i></button>
+	</div>
+	<div class="header" id="header">SUDOKU <span class="weight-600">Streak</span></div>
+	<div class="container">
+		<div class="subcontainer">
+			<div class="playground" id="maingame">
+				<input id="a1" type="number" max="4" autocomplete="off">
+				<input id="a2" type="number" max="4" autocomplete="off">
+				<input id="a3" type="number" max="4" autocomplete="off">
+				<input id="a4" type="number" max="4" autocomplete="off">
+				<input id="b1" type="number" max="4" autocomplete="off">
+				<input id="b2" type="number" max="4" autocomplete="off">
+				<input id="b3" type="number" max="4" autocomplete="off">
+				<input id="b4" type="number" max="4" autocomplete="off">
+				<input id="c1" type="number" max="4" autocomplete="off">
+				<input id="c2" type="number" max="4" autocomplete="off">
+				<input id="c3" type="number" max="4" autocomplete="off">
+				<input id="c4" type="number" max="4" autocomplete="off">
+				<input id="d1" type="number" max="4" autocomplete="off">
+				<input id="d2" type="number" max="4" autocomplete="off">
+				<input id="d3" type="number" max="4" autocomplete="off">
+				<input id="d4" type="number" max="4" autocomplete="off">
+			</div>
+			<button class="weight-600">Check</button>
+		</div>
+		<div class="info flex-col">
+			<h2>Summary</h2>
+			<span id="streak">Streak: <span class="weight-600" id="numb">0</span></span>
+			<button id="next" onclick="nextquest()">Next Problem</button>
+		</div>
+	</div>
+	<div class="ftr">
+		<div class="name flex-col"><a href="#">SUDOKU</a><a href="#"><span class="weight-600">Streak</span></a></div>
+		<div>
+			<div class="weight-600">AUTHORS</div>
+			<div class="links flex-col">
+				<a href="https://github.com/NguyenD-Nam" target="_blank">Dinh Nam Nguyen</a>
+				<a href="https://github.com/DecSP" target="_blank">Cao Son Nguyen</a>
+			</div>
+			<div class="weight-600">CONTACT US</div>
+			<div class="links flex-col">
+				<a href="https://github.com/NguyenD-Nam/SUDOKU-Streak" target="_blank">GitHub</a>
+				<a href="mailto:nguyennamnade22@gmail.com" target="_blank">Email</a>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="script.js"></script>
+</body>
+</html>

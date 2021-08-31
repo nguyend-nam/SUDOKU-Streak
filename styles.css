@@ -175,7 +175,7 @@ input::-webkit-inner-spin-button {
 		padding: 5px;
 		display: block;
 		color: #57CC99;
-		box-shadow: 0 3px 15px #00000020;
+		box-shadow: 0 3px 10px #0000001a;
 		border-radius: 10px 10px 10px 0;
 		margin: 20px 0 0 0;
 	}

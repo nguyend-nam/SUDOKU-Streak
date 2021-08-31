@@ -114,7 +114,7 @@ function checkans(){
 	// alert("Congrats! Solve another problem to increase your streak!");
 	document.getElementById('message').style.top = '57px';
 	streak += 1;
-	document.getElementById('streak').innerHTML = 'Streak: ' + streak;
+	document.getElementById('streak').innerHTML = 'Streak: <span class="weight-600" id="numb">' + streak + '</span>';
 	document.getElementById('next').disabled = false;
 	document.getElementById('next').style.opacity = '1';
 }

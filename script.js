@@ -120,22 +120,10 @@ function checkans(){
 }
 
 function nextquest(){
-	for(let p = 0; p < 4; p++){
-		var c; var r;
-		if(p == 0) r = 'a';
-		else if(p == 1) r = 'b';
-		else if(p == 2) r = 'c';
-		else r = 'd';
-		for(let q = 0; q < 4; q++){
-			if(q == 0) c = '1';
-			else if(q == 1) c = '2';
-			else if(q == 2) c = '3';
-			else c = '4';
-			var id = r+c;
-			document.getElementById(id).value = '';
-			document.getElementById(id).readOnly = false;
-			document.getElementById(id).setAttribute("class","");
-		}
+	for(let i = 0; i < n*n; ++i){
+		tabletext[i].value = '';
+		tabletext[i].readOnly = false;
+		tabletext[i].setAttribute("class","");
 	}
 	generate()
 	render()

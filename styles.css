@@ -41,6 +41,7 @@ body{
 }
 button{
 	border: none;
+	outline: none;
 	background-color: transparent;
 	margin: 10px 0 0 0;
 	font-size: 30px;

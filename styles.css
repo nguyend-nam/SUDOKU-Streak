@@ -167,17 +167,9 @@ input::-webkit-inner-spin-button {
 	}
 	.subcontainer{
 		width: 100%;
-		margin-bottom: 25px;
+		margin-bottom: 70px;
 		margin-top: 65px;
 		flex-wrap: wrap;
-	}
-	.subcontainer button{
-		padding: 5px;
-		display: block;
-		color: #57CC99;
-		box-shadow: 0 3px 10px #0000001a;
-		border-radius: 10px 10px 10px 0;
-		margin: 20px 0 0 0;
 	}
 	.playground{
 		width: 80%;

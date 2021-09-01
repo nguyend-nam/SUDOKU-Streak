@@ -32,7 +32,7 @@ body{
 	position: fixed;
 	top: 57px;
 	z-index: 5;
-	background-color: #efefef;
+	background-color: #f8f8f8;
 	height: 250px;
 	padding: 10px 200px 10px 200px; margin: 0 auto;
 	font-size: 20px;
@@ -79,18 +79,30 @@ button{
 	display: flex; flex-wrap: wrap;
 	justify-content: space-around;
 	border-radius: 10px 10px 10px 0;
-	box-shadow: 0 3px 10px #00000030;
+	box-shadow: 0 5px 15px #00000030;
 }
 .playground *{
 	font-size: 25px;
 	box-sizing: border-box;
-	width: calc(25% - 30px);
-	margin: 15px;
+	width: calc(25% - 4px);
+	margin: 2px;
 	border: none; outline: none;
-	border-radius: 10px 10px 10px 0;
+	border-radius: 0px;
 	padding: 5px;
 	text-align: center;
 	color: #22577A;
+}
+#a2, #b2, #c2, #d2, #a4, #b4, #c4, #d4{
+	border-right: 3px solid #57CC99;
+}
+#a3, #b3, #c3, #d3, #a1, #b1, #c1, #d1{
+	border-left: 3px solid #57CC99;
+}
+#b1, #b2, #b3, #b4, #d1, #d2, #d3, #d4{
+	border-bottom: 3px solid #57CC99;
+}
+#c1, #c2, #c3, #c4, #a1, #a2, #a3, #a4{
+	border-top: 3px solid #57CC99;
 }
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -175,7 +187,7 @@ input::-webkit-inner-spin-button {
 	}
 	.playground{
 		width: 80%;
-		height: 350px;
+		height: 340px;
 	}
 	.info{
 		position: static;

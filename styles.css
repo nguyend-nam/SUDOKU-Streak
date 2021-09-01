@@ -20,11 +20,10 @@ body{
 	text-align: center;
 }
 .message{
-	height: 57px;
-	padding: 20px;
+	padding: 18px;
 	top: -57px;
 	position: absolute;
-	font-size: 25px;
+	font-size: 30px;
 	transition: 0.5s;
 	color: #38A3A5;
 }
@@ -74,7 +73,7 @@ button{
 }
 .playground{
 	padding: 15px;
-	width: 390px; height: 390px;
+	width: 420px; height: 420px;
 	background-color: #57CC99;
 	display: flex; flex-wrap: wrap;
 	justify-content: space-around;
@@ -84,25 +83,25 @@ button{
 .playground *{
 	font-size: 25px;
 	box-sizing: border-box;
-	width: calc(25% - 4px);
-	margin: 2px;
+	width: calc(11.111111111111% - 2px);
+	margin: 1px;
 	border: none; outline: none;
 	border-radius: 0px;
 	padding: 5px;
 	text-align: center;
 	color: #22577A;
 }
-#a2, #b2, #c2, #d2, #a4, #b4, #c4, #d4{
-	border-right: 3px solid #57CC99;
+#a3, #b3, #c3, #d3, #e3, #f3, #g3, #h3, #i3, #a6, #b6, #c6, #d6, #e6, #f6, #g6, #h6, #i6, #a9, #b9, #c9, #d9, #e9, #f9, #g9, #h9, #i9{
+	border-right: 2px solid #57CC99;
 }
-#a3, #b3, #c3, #d3, #a1, #b1, #c1, #d1{
-	border-left: 3px solid #57CC99;
+#a1, #b1, #c1, #d1, #e1, #f1, #g1, #h1, #i1, #a4, #b4, #c4, #d4, #e4, #f4, #g4, #h4, #i4, #a7, #b7, #c7, #d7, #e7, #f7, #g7, #h7, #i7{
+	border-left: 2px solid #57CC99;
 }
-#b1, #b2, #b3, #b4, #d1, #d2, #d3, #d4{
-	border-bottom: 3px solid #57CC99;
+#c1, #c2, #c3, #c4, #c5, #c6, #c7, #c8, #c9, #f1, #f2, #f3, #f4, #f5, #f6, #f7, #f8, #f9, #i1, #i2, #i3, #i4, #i5, #i6, #i7, #i8, #i9{
+	border-bottom: 2px solid #57CC99;
 }
-#c1, #c2, #c3, #c4, #a1, #a2, #a3, #a4{
-	border-top: 3px solid #57CC99;
+#a1, #a2, #a3, #a4, #a5, #a6, #a7, #a8, #a9, #d1, #d2, #d3, #d4, #d5, #d6, #d7, #d8, #d9, #g1, #g2, #g3, #g4, #g5, #g6, #g7, #g8, #g9{
+	border-top: 2px solid #57CC99;
 }
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -171,7 +170,9 @@ input::-webkit-inner-spin-button {
 @media (max-width: 700px){
 	.welcome{
 		padding: 10px;
-/* 		font-size: 19px; */
+	}
+	.message{
+		font-size: 25px;
 	}
 	.header{
 		text-align: center;
@@ -181,13 +182,13 @@ input::-webkit-inner-spin-button {
 	}
 	.subcontainer{
 		width: 100%;
-		margin-bottom: 80px;
-		margin-top: 65px;
+		margin-bottom: 73px;
+		margin-top: 60px;
 		flex-wrap: wrap;
 	}
 	.playground{
-		width: 80%;
-		height: 340px;
+		width: 93%; height: unset;
+		padding: 5px;
 	}
 	.info{
 		position: static;

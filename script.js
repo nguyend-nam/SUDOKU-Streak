@@ -19,9 +19,10 @@ function render(){
 			tabletext[i].setAttribute("class","orig");
 		}
 		else {
-			tabletext[i].setAttribute("onchange","processInput(this.value)");
+			tabletext[i].setAttribute("onchange","checkans()");
 			tabletext[i].setAttribute("min",1);
 		}
+		tabletext[i].setAttribute("onclick","highlight(this.value)");
 	}
 	document.getElementById('next').disabled = true;
 	document.getElementById('next').style.opacity = '0.5';
@@ -117,23 +118,19 @@ function generate(){
 	}
 }
 
-function processInput(x){
-	unhighlight();
-	if (x>=1&&x<=n) highlighting(x);
-	checkans();
-}
-
-
 function unhighlight(){
 	for (let i=0;i<n*n;++i){
 		tabletext[i].setAttribute("class",(tabletext[i].readOnly)?"orig":"");
 	}
 }
 
-function highlighting(x){
-	for (let i=0;i<n*n;++i){
-		if (tabletext[i].value==x){
-			tabletext[i].setAttribute("class","highlight");
+function highlight(x){
+	unhighlight();
+	if (x>=1&&x<=n) {
+		for (let i=0;i<n*n;++i){
+			if (tabletext[i].value==x){
+				tabletext[i].setAttribute("class","highlight");
+			}
 		}
 	}
 }

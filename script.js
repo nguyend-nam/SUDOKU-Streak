@@ -4,7 +4,8 @@ var table;
 var tabletext;
 var ans;
 var streak = 0;
-var easiness = 2; // less is harder
+var easiness = 3; // less is harder
+var classstate=[];
 
 generate()
 render()
@@ -18,7 +19,8 @@ function render(){
 			tabletext[i].setAttribute("class","orig");
 		}
 		else {
-			tabletext[i].setAttribute("onchange","checkans()");
+			tabletext[i].setAttribute("onchange","processInput(this.value)");
+			tabletext[i].setAttribute("min",1);
 		}
 	}
 	document.getElementById('next').disabled = true;
@@ -111,6 +113,27 @@ function generate(){
 			if (surviveCnt<=0) continue;
 			--surviveCnt;
 			table[hid]=tmp;
+		}
+	}
+}
+
+function processInput(x){
+	unhighlight();
+	if (x>=1&&x<=n) highlighting(x);
+	checkans();
+}
+
+
+function unhighlight(){
+	for (let i=0;i<n*n;++i){
+		tabletext[i].setAttribute("class",(tabletext[i].readOnly)?"orig":"");
+	}
+}
+
+function highlighting(x){
+	for (let i=0;i<n*n;++i){
+		if (tabletext[i].value==x){
+			tabletext[i].setAttribute("class","highlight");
 		}
 	}
 }

@@ -170,6 +170,11 @@ input[type=number] {
 	color: whitesmoke;
 }
 
+.highlight{
+	background-color: lightblue;
+	color:  black;
+}
+
 @media (max-width: 700px){
 	.welcome{
 		padding: 10px;

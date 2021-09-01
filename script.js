@@ -1,9 +1,10 @@
-var nr=2;
-var n=4;
+var nr=3;
+var n=9;
 var table;
 var tabletext;
 var ans;
 var streak = 0;
+var easiness = 2; // less is harder
 
 generate()
 render()
@@ -94,6 +95,7 @@ function generate(){
 	remain=[];	// remain cells
 	for (let i=0;i<n*n;++i) remain.push(i);
 	
+	let surviveCnt=easiness*n;
 	while (remain.length>0){
 		let ridx=randi(remain.length);
 		let hid=remain[ridx];
@@ -105,6 +107,11 @@ function generate(){
 		let tmp=table[hid]
 		table[hid]=-1;
 		if (solverecu()!=1) table[hid]=tmp;
+		else {
+			if (surviveCnt<=0) continue;
+			--surviveCnt;
+			table[hid]=tmp;
+		}
 	}
 }
 

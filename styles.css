@@ -119,7 +119,8 @@ input::-webkit-inner-spin-button {
 	font-size: 19px;
 }
 .info button:hover{
-	background-color: dimgrey;
+	background-color: #366b82;
+	transform: translateY(-3px);
 }
 .ftr{
 	background-color: #22577A;
@@ -158,6 +159,7 @@ input::-webkit-inner-spin-button {
 @media (max-width: 700px){
 	.welcome{
 		padding: 10px;
+/* 		font-size: 19px; */
 	}
 	.header{
 		text-align: center;
@@ -181,6 +183,10 @@ input::-webkit-inner-spin-button {
 		top: unset;
 		width: 100%;
 		padding: 15px 35px 15px 35px;
+	}
+	.info button:hover{
+		background-color: #366b82;
+		transform: translateY(0px);
 	}
 	.ftr{
 		flex-wrap: wrap;

@@ -1,9 +1,8 @@
-var table=[];
-var dif=2;
 var nr=2;
 var n=4;
-var ans;
+var table;
 var tabletext;
+var ans;
 var streak = 0;
 
 generate()
@@ -11,8 +10,6 @@ render()
 
 function render(){
 	tabletext=document.getElementById("maingame").children;
-	console.log("test")
-	console.log(tabletext);
 	for (let i=0;i<n*n;++i){
 		if (table[i]!=-1) {
 			tabletext[i].value=table[i];
@@ -79,7 +76,7 @@ function solverecu(){
 }
 	
 function generate(){
-	table=[]
+	table=[];
 	for (let i=0;i<n*n;++i){
 		table.push(-1);
 	}
@@ -94,16 +91,20 @@ function generate(){
 	ans=[];
 	table.forEach((i)=>{ans.push(i)});
 	
-	let cnting=0;
-	while (true){
-		let hid=randi(n*n);
-		if (table[hid]==-1) continue;
-		let tmp=table[hid];
+	remain=[];	// remain cells
+	for (let i=0;i<n*n;++i) remain.push(i);
+	
+	while (remain.length>0){
+		let ridx=randi(remain.length);
+		let hid=remain[ridx];
+		
+		// remove hid from remain
+		remain[ridx]=remain[remain.length-1];
+		remain.pop();
+
+		let tmp=table[hid]
 		table[hid]=-1;
-		if (solverecu()==1) continue;
-		table[hid]=tmp;
-		cnting+=1;
-		if (cnting>dif) break;
+		if (solverecu()!=1) table[hid]=tmp;
 	}
 }
 

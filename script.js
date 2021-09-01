@@ -23,6 +23,7 @@ function render(){
 			tabletext[i].setAttribute("min",1);
 		}
 		tabletext[i].setAttribute("onclick","highlight(this.value)");
+		tabletext[i].setAttribute("oninput","highlight(this.value)");
 	}
 	document.getElementById('next').disabled = true;
 	document.getElementById('next').style.opacity = '0.5';

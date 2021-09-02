@@ -45,6 +45,7 @@ button{
 	margin: 10px 0 0 0;
 	font-size: 30px;
 	color: #57CC99;
+	transition: 0.3s;
 }
 .header{
 	user-select: none;
@@ -62,6 +63,14 @@ button{
 	display: flex;
 	background-color: #80ED99;
 }
+.container h2{
+	color: #fff;
+	margin-bottom: 10px;
+	font-size: 30px;
+}
+.container button:hover{
+	transform: translateY(-3px);
+}
 .subcontainer{
 	margin: 65px 0 105px 0;
 	width: calc(100% - 300px);
@@ -69,7 +78,17 @@ button{
 	justify-content: center;
 }
 .subcontainer button{
-	display: none;
+	background-color: #57CC99;
+	color: #fff;
+	padding: 5px;
+	width: 150px;
+}
+.select{
+	height: 350px;
+	text-align: center;
+}
+.select button{
+	margin: 0 5px 0 5px;
 }
 .playground{
 	padding: 15px;
@@ -79,6 +98,7 @@ button{
 	justify-content: space-around;
 	border-radius: 10px 10px 10px 0;
 	box-shadow: 0 5px 15px #00000030;
+	display: none;
 }
 .playground *{
 	font-size: 25px;
@@ -103,9 +123,28 @@ button{
 #a1, #a2, #a3, #a4, #a5, #a6, #a7, #a8, #a9, #d1, #d2, #d3, #d4, #d5, #d6, #d7, #d8, #d9, #g1, #g2, #g3, #g4, #g5, #g6, #g7, #g8, #g9{
 	border-top: 2px solid #57CC99;
 }
+
+.four *{
+	width: calc(25% - 2px);
+}
+#j12, #k12, #l12, #m12, #j14, #k14, #l14, #m14{
+	border-right: 2px solid #57CC99;
+}
+#j11, #k11, #l11, #m11, #j13, #k13, #l13, #m13{
+	border-left: 2px solid #57CC99;
+}
+#k11, #k12, #k13, #k14, #m11, #m12, #m13, #m14{
+	border-bottom: 2px solid #57CC99;
+}
+#j11, #j12, #j13, #j14, #l11, #l12, #l13, #l14{
+	border-top: 2px solid #57CC99;
+}
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
 	-webkit-appearance: none;
+}
+input[type=number] {
+    -moz-appearance:textfield;
 }
 .info{
 	position: sticky;
@@ -115,10 +154,6 @@ input::-webkit-inner-spin-button {
 	box-sizing: border-box;
 	padding: 10px;
 	font-size: 19px;
-}
-.info h2{
-	color: #fff;
-	margin-bottom: 10px;
 }
 .info button{
 	background-color: #22577A;
@@ -131,7 +166,6 @@ input::-webkit-inner-spin-button {
 }
 .info button:hover{
 	background-color: #366b82;
-	transform: translateY(-3px);
 }
 .ftr{
 	background-color: #22577A;
@@ -167,6 +201,11 @@ input::-webkit-inner-spin-button {
 	color: whitesmoke;
 }
 
+.highlight{
+	background-color: lightblue;
+	color:  black;
+}
+
 @media (max-width: 700px){
 	.welcome{
 		padding: 10px;
@@ -190,6 +229,10 @@ input::-webkit-inner-spin-button {
 		width: 93%; height: unset;
 		padding: 5px;
 	}
+	.four{
+		width: 85%; height: 350px;
+		padding: 10px;
+	}
 	.info{
 		position: static;
 		right: unset;
@@ -197,7 +240,7 @@ input::-webkit-inner-spin-button {
 		width: 100%;
 		padding: 15px 35px 15px 35px;
 	}
-	.info button:hover{
+	.container button:hover{
 		background-color: #366b82;
 		transform: translateY(0px);
 	}

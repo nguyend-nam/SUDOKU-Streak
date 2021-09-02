@@ -1,16 +1,38 @@
-var nr=3;
-var n=9;
+var nr=2;
+var n=4;
 var table;
 var tabletext;
 var ans;
 var streak = 0;
-var easiness = 10; // less is harder
+var easiness = -1; // less is harder
+var board = '';
 
-generate()
-render()
+function four(){
+	document.getElementById('maingamefour').style.display = 'inherit';
+	document.getElementById('select').style.display = 'none';
+	nr = 2; n = 4;
+	easiness = -1;
+	tabletext=document.getElementById('maingamefour').children;
+		
+	generate()
+	render()
+
+}
+
+function nine(){
+	document.getElementById('maingame').style.display = 'inherit';
+	document.getElementById('select').style.display = 'none';
+	nr = 3; n = 9;
+	easiness = 10;
+	tabletext=document.getElementById('maingame').children;
+
+	generate()
+	render()
+
+}
 
 function render(){
-	tabletext=document.getElementById("maingame").children;
+	// tabletext=document.getElementById('maingamefour').children;
 	for (let i=0;i<n*n;++i){
 		if (table[i]!=-1) {
 			tabletext[i].value=table[i];

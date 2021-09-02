@@ -4,12 +4,35 @@ var table;
 var tabletext;
 var ans;
 var streak = 0;
+var easiness = -1; // less is harder
+var board = '';
 
-generate()
-render()
+function four(){
+	document.getElementById('maingamefour').style.display = 'inherit';
+	document.getElementById('select').style.display = 'none';
+	nr = 2; n = 4;
+	easiness = -1;
+	tabletext=document.getElementById('maingamefour').children;
+		
+	generate()
+	render()
+
+}
+
+function nine(){
+	document.getElementById('maingame').style.display = 'inherit';
+	document.getElementById('select').style.display = 'none';
+	nr = 3; n = 9;
+	easiness = 10;
+	tabletext=document.getElementById('maingame').children;
+
+	generate()
+	render()
+
+}
 
 function render(){
-	tabletext=document.getElementById("maingame").children;
+	// tabletext=document.getElementById('maingamefour').children;
 	for (let i=0;i<n*n;++i){
 		if (table[i]!=-1) {
 			tabletext[i].value=table[i];
@@ -18,7 +41,10 @@ function render(){
 		}
 		else {
 			tabletext[i].setAttribute("onchange","checkans()");
+			tabletext[i].setAttribute("min",1);
 		}
+		tabletext[i].setAttribute("onclick","highlight(this.value)");
+		tabletext[i].setAttribute("oninput","highlight(this.value)");
 	}
 	document.getElementById('next').disabled = true;
 	document.getElementById('next').style.opacity = '0.5';
@@ -94,6 +120,7 @@ function generate(){
 	remain=[];	// remain cells
 	for (let i=0;i<n*n;++i) remain.push(i);
 	
+	let surviveL=[];
 	while (remain.length>0){
 		let ridx=randi(remain.length);
 		let hid=remain[ridx];
@@ -105,6 +132,32 @@ function generate(){
 		let tmp=table[hid]
 		table[hid]=-1;
 		if (solverecu()!=1) table[hid]=tmp;
+		else {
+			if (surviveL.length>easiness) continue;
+			surviveL.push([hid,tmp]);
+		}
+	}
+	// console.log(surviveL);
+	while (surviveL.length>0){
+		let p=surviveL.pop();
+		table[p[0]]=p[1];
+	}
+}
+
+function unhighlight(){
+	for (let i=0;i<n*n;++i){
+		tabletext[i].setAttribute("class",(tabletext[i].readOnly)?"orig":"");
+	}
+}
+
+function highlight(x){
+	unhighlight();
+	if (x>=1&&x<=n) {
+		for (let i=0;i<n*n;++i){
+			if (tabletext[i].value==x){
+				tabletext[i].setAttribute("class","highlight");
+			}
+		}
 	}
 }
 

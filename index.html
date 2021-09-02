@@ -24,6 +24,13 @@
 	<div class="header" id="header">SUDOKU <span class="weight-600">Streak</span></div>
 	<div class="container">
 		<div class="subcontainer">
+			<div class="select flex-col" id="select">
+				<h2>Choose board size</h2>
+				<div>
+					<button onclick="four()">4x4</button>
+					<button onclick="nine()">9x9</button>
+				</div>
+			</div>
 			<div class="playground" id="maingame">
 				<input id="a1" type="number" max="9" autocomplete="off">
 				<input id="a2" type="number" max="9" autocomplete="off">
@@ -115,7 +122,24 @@
 				<input id="i8" type="number" max="9" autocomplete="off">
 				<input id="i9" type="number" max="9" autocomplete="off">
 			</div>
-			<button class="weight-600">Check</button>
+			<div class="playground four" id="maingamefour">
+				<input id="j11" type="number" max="4" autocomplete="off">
+				<input id="j12" type="number" max="4" autocomplete="off">
+				<input id="j13" type="number" max="4" autocomplete="off">
+				<input id="j14" type="number" max="4" autocomplete="off">
+				<input id="k11" type="number" max="4" autocomplete="off">
+				<input id="k12" type="number" max="4" autocomplete="off">
+				<input id="k13" type="number" max="4" autocomplete="off">
+				<input id="k14" type="number" max="4" autocomplete="off">
+				<input id="l11" type="number" max="4" autocomplete="off">
+				<input id="l12" type="number" max="4" autocomplete="off">
+				<input id="l13" type="number" max="4" autocomplete="off">
+				<input id="l14" type="number" max="4" autocomplete="off">
+				<input id="m11" type="number" max="4" autocomplete="off">
+				<input id="m12" type="number" max="4" autocomplete="off">
+				<input id="m13" type="number" max="4" autocomplete="off">
+				<input id="m14" type="number" max="4" autocomplete="off">
+			</div>
 		</div>
 		<div class="info flex-col">
 			<h2>Summary</h2>

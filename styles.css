@@ -98,7 +98,6 @@ button{
 	justify-content: space-around;
 	border-radius: 10px 10px 10px 0;
 	box-shadow: 0 5px 15px #00000030;
-	display: none;
 }
 .playground *{
 	font-size: 25px;

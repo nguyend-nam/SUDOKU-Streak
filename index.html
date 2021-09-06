@@ -23,122 +23,13 @@
 	</div>
 	<div class="header" id="header">SUDOKU <span class="weight-600">Streak</span></div>
 	<div class="container">
-		<div class="subcontainer">
+		<div class="subcontainer" id="subcontainer">
 			<div class="select flex-col" id="select">
 				<h2>Choose board size</h2>
 				<div>
 					<button onclick="four()">4x4</button>
 					<button onclick="nine()">9x9</button>
 				</div>
-			</div>
-			<div class="playground" id="maingame">
-				<input id="a1" type="number" max="9" autocomplete="off">
-				<input id="a2" type="number" max="9" autocomplete="off">
-				<input id="a3" type="number" max="9" autocomplete="off">
-				<input id="a4" type="number" max="9" autocomplete="off">
-				<input id="a5" type="number" max="9" autocomplete="off">
-				<input id="a6" type="number" max="9" autocomplete="off">
-				<input id="a7" type="number" max="9" autocomplete="off">
-				<input id="a8" type="number" max="9" autocomplete="off">
-				<input id="a9" type="number" max="9" autocomplete="off">
-				
-				<input id="b1" type="number" max="9" autocomplete="off">
-				<input id="b2" type="number" max="9" autocomplete="off">
-				<input id="b3" type="number" max="9" autocomplete="off">
-				<input id="b4" type="number" max="9" autocomplete="off">
-				<input id="b5" type="number" max="9" autocomplete="off">
-				<input id="b6" type="number" max="9" autocomplete="off">
-				<input id="b7" type="number" max="9" autocomplete="off">
-				<input id="b8" type="number" max="9" autocomplete="off">
-				<input id="b9" type="number" max="9" autocomplete="off">
-
-				<input id="c1" type="number" max="9" autocomplete="off">
-				<input id="c2" type="number" max="9" autocomplete="off">
-				<input id="c3" type="number" max="9" autocomplete="off">
-				<input id="c4" type="number" max="9" autocomplete="off">
-				<input id="c5" type="number" max="9" autocomplete="off">
-				<input id="c6" type="number" max="9" autocomplete="off">
-				<input id="c7" type="number" max="9" autocomplete="off">
-				<input id="c8" type="number" max="9" autocomplete="off">
-				<input id="c9" type="number" max="9" autocomplete="off">
-
-				<input id="d1" type="number" max="9" autocomplete="off">
-				<input id="d2" type="number" max="9" autocomplete="off">
-				<input id="d3" type="number" max="9" autocomplete="off">
-				<input id="d4" type="number" max="9" autocomplete="off">
-				<input id="d5" type="number" max="9" autocomplete="off">
-				<input id="d6" type="number" max="9" autocomplete="off">
-				<input id="d7" type="number" max="9" autocomplete="off">
-				<input id="d8" type="number" max="9" autocomplete="off">
-				<input id="d9" type="number" max="9" autocomplete="off">
-
-				<input id="e1" type="number" max="9" autocomplete="off">
-				<input id="e2" type="number" max="9" autocomplete="off">
-				<input id="e3" type="number" max="9" autocomplete="off">
-				<input id="e4" type="number" max="9" autocomplete="off">
-				<input id="e5" type="number" max="9" autocomplete="off">
-				<input id="e6" type="number" max="9" autocomplete="off">
-				<input id="e7" type="number" max="9" autocomplete="off">
-				<input id="e8" type="number" max="9" autocomplete="off">
-				<input id="e9" type="number" max="9" autocomplete="off">
-
-				<input id="f1" type="number" max="9" autocomplete="off">
-				<input id="f2" type="number" max="9" autocomplete="off">
-				<input id="f3" type="number" max="9" autocomplete="off">
-				<input id="f4" type="number" max="9" autocomplete="off">
-				<input id="f5" type="number" max="9" autocomplete="off">
-				<input id="f6" type="number" max="9" autocomplete="off">
-				<input id="f7" type="number" max="9" autocomplete="off">
-				<input id="f8" type="number" max="9" autocomplete="off">
-				<input id="f9" type="number" max="9" autocomplete="off">
-
-				<input id="g1" type="number" max="9" autocomplete="off">
-				<input id="g2" type="number" max="9" autocomplete="off">
-				<input id="g3" type="number" max="9" autocomplete="off">
-				<input id="g4" type="number" max="9" autocomplete="off">
-				<input id="g5" type="number" max="9" autocomplete="off">
-				<input id="g6" type="number" max="9" autocomplete="off">
-				<input id="g7" type="number" max="9" autocomplete="off">
-				<input id="g8" type="number" max="9" autocomplete="off">
-				<input id="g9" type="number" max="9" autocomplete="off">
-
-				<input id="h1" type="number" max="9" autocomplete="off">
-				<input id="h2" type="number" max="9" autocomplete="off">
-				<input id="h3" type="number" max="9" autocomplete="off">
-				<input id="h4" type="number" max="9" autocomplete="off">
-				<input id="h5" type="number" max="9" autocomplete="off">
-				<input id="h6" type="number" max="9" autocomplete="off">
-				<input id="h7" type="number" max="9" autocomplete="off">
-				<input id="h8" type="number" max="9" autocomplete="off">
-				<input id="h9" type="number" max="9" autocomplete="off">
-
-				<input id="i1" type="number" max="9" autocomplete="off">
-				<input id="i2" type="number" max="9" autocomplete="off">
-				<input id="i3" type="number" max="9" autocomplete="off">
-				<input id="i4" type="number" max="9" autocomplete="off">
-				<input id="i5" type="number" max="9" autocomplete="off">
-				<input id="i6" type="number" max="9" autocomplete="off">
-				<input id="i7" type="number" max="9" autocomplete="off">
-				<input id="i8" type="number" max="9" autocomplete="off">
-				<input id="i9" type="number" max="9" autocomplete="off">
-			</div>
-			<div class="playground four" id="maingamefour">
-				<input id="j11" type="number" max="4" autocomplete="off">
-				<input id="j12" type="number" max="4" autocomplete="off">
-				<input id="j13" type="number" max="4" autocomplete="off">
-				<input id="j14" type="number" max="4" autocomplete="off">
-				<input id="k11" type="number" max="4" autocomplete="off">
-				<input id="k12" type="number" max="4" autocomplete="off">
-				<input id="k13" type="number" max="4" autocomplete="off">
-				<input id="k14" type="number" max="4" autocomplete="off">
-				<input id="l11" type="number" max="4" autocomplete="off">
-				<input id="l12" type="number" max="4" autocomplete="off">
-				<input id="l13" type="number" max="4" autocomplete="off">
-				<input id="l14" type="number" max="4" autocomplete="off">
-				<input id="m11" type="number" max="4" autocomplete="off">
-				<input id="m12" type="number" max="4" autocomplete="off">
-				<input id="m13" type="number" max="4" autocomplete="off">
-				<input id="m14" type="number" max="4" autocomplete="off">
 			</div>
 		</div>
 		<div class="info flex-col">

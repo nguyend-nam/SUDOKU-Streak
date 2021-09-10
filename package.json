@@ -11,7 +11,7 @@
       "name": "Son Nguyen Cao",
       "url": "https://github.com/DecSP"
     }
-  ]
+  ],
   "main": "index.html",
   "scripts": {
     "start": "npm run lite",

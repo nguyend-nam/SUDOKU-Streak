@@ -10,11 +10,11 @@
 
 <img src="img/screenshot2.png" width="400px"> <img src="img/screenshot1.png" width="400px">
 <img src="img/screenshot.png" width="400px">
-
+<!-- 
 ### Features:
   - [X] 4x4 & 9x9 Sudoku
   - [X] Friendly UI-UX
-  - [X] Streak counting
+  - [X] Streak counting -->
 
 ### Authors:
 <a title="" href="https://github.com/NguyenD-Nam"><img src="https://avatars.githubusercontent.com/u/69586735?v=4" width=26px /><img src="https://img.shields.io/badge/-@NguyenD--Nam-fff?style=for-the-badge&logo=GitHub&logoColor=bfbfbf&link=https://github.com/NguyenD-Nam"></a>
